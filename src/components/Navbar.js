@@ -1,5 +1,5 @@
 import { React } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {
     Box,
     Flex,
@@ -110,7 +110,7 @@ function Navbar(props) {
               />
             </MenuButton>
             <MenuList>
-              <MenuItem><NavLink to='/update'>Update Profile</NavLink></MenuItem>
+              <MenuItem> <Link to='/update'>Update Profile</Link></MenuItem>
               <MenuDivider />
               <NavLink to='/'><MenuItem onClick={ () => {props.log.setisLoggedIn(false)}}>Log Out</MenuItem></NavLink>
             </MenuList>

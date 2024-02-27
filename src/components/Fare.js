@@ -6,6 +6,7 @@ function Fare() {
     return (
     <Box m={24}>
         <VStack spacing={6}>
+        <Heading textAlign={'center'} color={'green.600'}>Your ride has been BOOKED!</Heading>
         <Heading textAlign={'center'}>Your Fare for this ride is : Rs.{x}</Heading>
         <Button
               loadingText="Submitting"

@@ -24,8 +24,9 @@ function Result() {
         <Heading ml={4} mb={8} bgGradient='linear(to-r,blue.500 , green.200)'bgClip='text'>Available Carpoolers :</Heading>
         <Stack className='fadeup' spacing='8'>
             {users1.map((riders) => (
-             <NavLink to='/pay'>
+             
              <Card 
+                onClick={clickHandler}
                 key={riders.id} 
                 variant={'elevated'} 
                 bgColor={'gray.200'}
@@ -35,17 +36,18 @@ function Result() {
                 _hover={{
                     cursor:'pointer'
                 }}
-                >
+                ><NavLink to='/pay'>
 
-                    <CardBody onClick={clickHandler}>
+                    <CardBody>
                         <Heading size='md' mb={4}>{riders.name}</Heading>
                         <Text>Gender : {riders.Gender}</Text>
                         <Text>Source : {riders.start}</Text>
                         <Text>Destination : {riders.destination}</Text>
                         <Text >Car Type : {riders.Car_type}</Text>
                     </CardBody>
+                    </NavLink>
                 </Card>
-            </NavLink>
+            
   ))}
 </Stack>
     </Box>
@@ -94,51 +96,6 @@ const users1 = [
       Car_type: 'SUV',
     },
   ];
-  
-
-//8 am
-// const users2 = [
-//     {
-//         id: 1,
-//         name: 'Kiran Gupta',
-//         start: 'Thakur Complex',
-//         destination: 'WeWork, BKC (Co-working space in the business district)',
-//         Gender: 'Male',
-//         Car_type: 'Executive'
-//     },
-//     {
-//         id: 2,
-//         name: 'Janhvi Sharma',
-//         start: 'Nahar Amrit Shakti',
-//         destination: 'Paradigm IT Park, Malad West',
-//         Gender: 'Male',
-//         Car_type: 'Executive'
-//     },
-//     {
-//         id: 3,
-//         name: 'Janhvi Agarwal',
-//         start: 'Ekta BHoomi',
-//         destination: 'Kanakia Zillion IT Park, Bandra Kurla Complex (BKC)',
-//         Gender: 'Male',
-//         Car_type: 'Executive'
-//     },
-//     {
-//         id: 4,
-//         name: 'Priya Verma',
-//         start: 'Northen Heights',
-//         destination: 'Lotus Park, Andheri East',
-//         Gender: 'Female',
-//         Car_type: 'Executive'
-//     },
-//     {
-//         id: 5,
-//         name: 'Aaron Gupta',
-//         start: 'ENL Aryavarta',
-//         destination: 'Pinnacle Corporate Park, Bandra Kurla Complex (BKC)',
-//         Gender: 'Male',
-//         Car_type: 'SUV'
-//     }
-// ];
 
 
 export default Result

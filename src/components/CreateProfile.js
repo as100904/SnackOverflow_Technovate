@@ -49,7 +49,7 @@ function CreateProfile() {
           </Flex>
           
         </HStack>
-        <VStack>
+        <VStack >
         <FormControl id="firstName" isRequired>
           <FormLabel ml={'550px'}>Enter your Pick-Up Time</FormLabel>
             <Input w={'300px'} ml={'550px'} type="text" placeholder='hh:mm' id='time' name='Time' isRequired/>
